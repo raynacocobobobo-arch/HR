@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="视频部 HRPM 可视化界面演示">
+  <title>HRPM · 视频部项目与人员管理</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-ribbon">交互样稿 · 全部为模拟数据</div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">H</span>
+        <span><strong>HRPM</strong><small>视频部运营系统</small></span>
+      </div>
+
+      <p class="nav-caption">业务对象</p>
+      <nav aria-label="主导航">
+        <button data-nav data-icon="⌂" aria-label="工作台" aria-current="page">工作台</button>
+        <button data-nav data-icon="▦" aria-label="项目">项目</button>
+        <button data-nav data-icon="♙" aria-label="人员">人员</button>
+        <button data-nav data-icon="▤" aria-label="档期">档期</button>
+        <button data-nav data-icon="◷" aria-label="工时">工时</button>
+        <button data-nav data-icon="¥" aria-label="成本">成本</button>
+        <button data-nav data-icon="⌁" aria-label="报表">报表</button>
+        <button data-nav data-icon="⚙" aria-label="模板与设置">模板与设置</button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="local-card">
+        <span class="live-dot"></span>
+        <span><strong>演示模式</strong><small>不连接真实数据</small></span>
+      </div>
+      <div class="profile">
+        <span class="avatar">R</span>
+        <span><strong>Rayna</strong><small>系统所有者</small></span>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <span class="crumb">视频部 / <b id="current-object">工作台</b></span>
+          <h1 id="page-title">经营与执行总览</h1>
+        </div>
+        <div class="top-actions">
+          <label class="search"><span>⌕</span><input type="search" placeholder="搜索项目、人员、任务…"></label>
+          <button class="ghost">导出演示</button>
+          <button class="primary">＋ 新建项目</button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <div class="view-stack">
+          <section class="view" data-view="工作台">
+            <div class="page-intro">
+              <div><span class="eyebrow">EXCEPTION FIRST</span><h2>今天先处理这 4 件事</h2><p>系统把冲突、逾期和预算异常放在最前面，正常项目不打扰你。</p></div>
+              <button class="secondary">查看今日执行 →</button>
+            </div>
+
+            <div class="metric-grid four">
+              <article class="metric alert"><span>待处理异常</span><strong>4</strong><small>2 项档期冲突 · 1 项超预算</small></article>
+              <article class="metric"><span>进行中项目</span><strong>8</strong><small>3 个项目本周交付</small></article>
+              <article class="metric"><span>今日拍摄</span><strong>3</strong><small>最近一场 09:30 开始</small></article>
+              <article class="metric"><span>本月完工预测</span><strong>¥14.6万</strong><small class="good">低于预算 2.2 万</small></article>
+            </div>
+
+            <div class="split wide-left">
+              <article class="panel">
+                <div class="panel-head"><span><strong>需要你决定</strong><small>按影响程度排序</small></span><button>全部异常</button></div>
+                <div class="decision-list">
+                  <button class="decision danger"><span class="decision-icon">!</span><span><strong>林可在 9 月 3 日被安排到两个拍摄</strong><small>南山品牌片 09:00–15:00 · 创始人访谈 13:30–18:00</small></span><b>处理冲突 →</b></button>
+                  <button class="decision warning"><span class="decision-icon">¥</span><span><strong>新品发布会的完工预测超出预算 8%</strong><small>加班与临时设备预计增加 ¥12,400</small></span><b>查看成本 →</b></button>
+                  <button class="decision info"><span class="decision-icon">◷</span><span><strong>城市文旅短片的脚本阶段已逾期 2 天</strong><small>后续勘景和拍摄窗口可能受到影响</small></span><b>查看项目 →</b></button>
+                </div>
+              </article>
+              <article class="panel">
+                <div class="panel-head"><span><strong>未来 7 天产能</strong><small>按关键岗位</small></span></div>
+                <div class="capacity-list">
+                  <div><span>摄影 <b>紧张</b></span><i><em style="width:92%"></em></i><small>92%</small></div>
+                  <div><span>灯光 <b>偏高</b></span><i><em style="width:81%"></em></i><small>81%</small></div>
+                  <div><span>制片</span><i><em style="width:66%"></em></i><small>66%</small></div>
+                  <div><span>剪辑</span><i><em style="width:54%"></em></i><small>54%</small></div>
+                </div>
+              </article>
+            </div>
+
+            <article class="panel timeline-panel">
+              <div class="panel-head"><span><strong>本周关键节点</strong><small>项目阶段和交付承诺</small></span><div class="legend"><i class="blue"></i>拍摄 <i class="purple"></i>后期 <i class="green"></i>交付</div></div>
+              <div class="week-grid">
+                <div class="week-head"><span>项目</span><span>周一 01</span><span>周二 02</span><span>周三 03</span><span>周四 04</span><span>周五 05</span><span>周六 06</span><span>周日 07</span></div>
+                <div class="week-row"><strong>南山品牌片</strong><span class="bar blue-bar" style="grid-column:2 / span 3">外景拍摄</span><span class="bar purple-bar" style="grid-column:5 / span 3">初剪</span></div>
+                <div class="week-row"><strong>新品发布会</strong><span class="bar orange-bar" style="grid-column:3 / span 2">现场执行</span><span class="bar green-bar" style="grid-column:7 / span 2">交付</span></div>
+                <div class="week-row"><strong>城市文旅短片</strong><span class="bar soft-bar" style="grid-column:2 / span 4">脚本与勘景</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="view" data-view="项目" hidden>
+            <div class="page-intro"><div><span class="eyebrow">PHASE GATE</span><h2>项目全生命周期</h2><p>所有项目都按七阶段推进，每次过门都检查必备材料与负责人。</p></div><button class="primary">＋ 新建项目</button></div>
+            <article class="project-hero">
+              <div class="project-title"><span class="project-logo">南</span><span><small>OP-2026-018 · 南山科技</small><h3>南山品牌形象片</h3><p>负责人：刘倩 · 9月18日最终交付</p></span><b class="health-chip">正常推进</b></div>
+              <div class="forecast-strip"><span><small>合同金额</small><strong>¥268,000</strong></span><span><small>基准成本</small><strong>¥156,000</strong></span><span><small>当前实际</small><strong>¥91,800</strong></span><span><small>完工预测</small><strong>¥149,600</strong></span><span><small>预测毛利</small><strong class="good">44.2%</strong></span></div>
+            </article>
+            <article class="panel stage-panel">
+              <div class="panel-head"><span><strong>阶段门</strong><small>当前：拍摄执行 · 第 4/7 阶段</small></span><button class="secondary">阶段检查清单</button></div>
+              <div class="stage-track">
+                <button class="stage done" data-stage>项目准入</button>
+                <button class="stage done" data-stage>前期策划</button>
+                <button class="stage done" data-stage>拍摄准备</button>
+                <button class="stage active" data-stage>拍摄执行</button>
+                <button class="stage" data-stage>后期制作</button>
+                <button class="stage" data-stage>审片修改</button>
+                <button class="stage" data-stage>交付关闭</button>
+              </div>
+            </article>
+            <div class="split equal">
+              <article class="panel">
+                <div class="panel-head"><span><strong>本阶段工作包</strong><small>OpenProject 任务</small></span><button>查看全部</button></div>
+                <div class="task-list">
+                  <div><i class="check">✓</i><span><strong>完成第一天外景拍摄</strong><small>陈越 · 已完成</small></span><b>100%</b></div>
+                  <div><i class="doing">●</i><span><strong>智园 A2 栋室内采访</strong><small>林可 · 今天 13:30</small></span><b>60%</b></div>
+                  <div><i>○</i><span><strong>补拍产品细节镜头</strong><small>周宁 · 明天</small></span><b>0%</b></div>
+                  <div><i>○</i><span><strong>素材校验与双盘备份</strong><small>王哲 · 明天</small></span><b>0%</b></div>
+                </div>
+              </article>
+              <article class="panel">
+                <div class="panel-head"><span><strong>阶段门检查</strong><small>进入后期制作前</small></span></div>
+                <div class="check-list"><label><input type="checkbox" checked> 拍摄素材已完成双盘校验</label><label><input type="checkbox" checked> 场记单与素材编号一致</label><label><input type="checkbox"> 补拍项已关闭或书面接受</label><label><input type="checkbox"> 客户确认进入后期</label></div>
+                <button class="primary full" disabled>还有 2 项未完成</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="人员" hidden>
+            <div class="page-intro"><div><span class="eyebrow">CREW DIRECTORY</span><h2>人员与能力</h2><p>人员不只是名单，还包括技能、角色、成本费率和可用产能。</p></div><button class="primary">＋ 添加人员</button></div>
+            <div class="metric-grid four"><article class="metric"><span>在岗人员</span><strong>14</strong><small>核心 9 · 合作 5</small></article><article class="metric"><span>本周可用</span><strong>61%</strong><small>152 小时剩余</small></article><article class="metric alert"><span>超负荷</span><strong>2</strong><small>摄影与灯光</small></article><article class="metric"><span>技能缺口</span><strong>1</strong><small>航拍执照资源不足</small></article></div>
+            <div class="people-grid">
+              <article class="person-card featured"><div class="person-head"><span class="avatar large purple">林</span><span><h3>林可</h3><p>摄影指导 · 核心员工</p></span><b class="risk-chip">112% 负荷</b></div><div class="skill-row"><span>摄影 A</span><span>灯光 B</span><span>航拍 C</span></div><div class="person-stats"><span><small>本周已排</small><strong>45h</strong></span><span><small>日成本</small><strong>¥1,800</strong></span><span><small>项目</small><strong>3</strong></span></div><div class="mini-calendar"><i class="busy">一</i><i class="conflict">二</i><i class="busy">三</i><i>四</i><i>五</i><i>六</i><i>日</i></div></article>
+              <article class="person-card"><div class="person-head"><span class="avatar large blue">陈</span><span><h3>陈越</h3><p>导演 · 核心员工</p></span><b>86% 负荷</b></div><div class="skill-row"><span>导演 A</span><span>策划 A</span><span>采访 A</span></div><div class="person-stats"><span><small>本周已排</small><strong>34h</strong></span><span><small>日成本</small><strong>¥2,200</strong></span><span><small>项目</small><strong>2</strong></span></div><div class="mini-calendar"><i class="busy">一</i><i class="busy">二</i><i class="busy">三</i><i>四</i><i>五</i><i>六</i><i>日</i></div></article>
+              <article class="person-card"><div class="person-head"><span class="avatar large orange">周</span><span><h3>周宁</h3><p>灯光师 · 合作伙伴</p></span><b class="warn-chip">94% 负荷</b></div><div class="skill-row"><span>灯光 A</span><span>器材 A</span><span>摄影 C</span></div><div class="person-stats"><span><small>本周已排</small><strong>38h</strong></span><span><small>日成本</small><strong>¥1,500</strong></span><span><small>项目</small><strong>3</strong></span></div><div class="mini-calendar"><i class="busy">一</i><i class="busy">二</i><i class="conflict">三</i><i>四</i><i>五</i><i>六</i><i>日</i></div></article>
+              <article class="person-card"><div class="person-head"><span class="avatar large teal">王</span><span><h3>王哲</h3><p>剪辑师 · 核心员工</p></span><b class="good-chip">52% 负荷</b></div><div class="skill-row"><span>剪辑 A</span><span>调色 B</span><span>包装 B</span></div><div class="person-stats"><span><small>本周已排</small><strong>21h</strong></span><span><small>日成本</small><strong>¥1,600</strong></span><span><small>项目</small><strong>2</strong></span></div><div class="mini-calendar"><i class="busy">一</i><i>二</i><i class="busy">三</i><i>四</i><i>五</i><i>六</i><i>日</i></div></article>
+            </div>
+          </section>
+
+          <section class="view" data-view="档期" hidden>
+            <div class="page-intro"><div><span class="eyebrow">HUMAN IN CONTROL</span><h2>排期方案对比</h2><p>Timefold 只提出方案；你确认整套结果后，系统才会写入正式档期。</p></div><div class="actions"><button class="secondary">退回重算</button><button class="primary" id="apply-schedule">应用整套方案</button></div></div>
+            <div class="proposal-summary"><span class="ai-badge">TF</span><span><strong>方案 #20260902-03</strong><small>基于当前 8 个项目、14 人、31 个工作包</small></span><span><small>硬约束冲突</small><strong class="good">2 → 0</strong></span><span><small>预计加班</small><strong class="good">18h → 6h</strong></span><span><small>跨场地移动</small><strong class="good">7 → 4</strong></span></div>
+            <div class="schedule-compare">
+              <article class="panel schedule-card" data-schedule="before"><div class="panel-head"><span><strong>调整前 · 当前排期</strong><small>存在 2 个硬冲突</small></span><b class="risk-chip">需处理</b></div><div class="calendar-head"><span>人员</span><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span></div><div class="calendar-row"><strong>林可<small>摄影</small></strong><i class="alloc blue-a">品牌片</i><i class="alloc conflict-a">双重安排</i><i></i><i class="alloc purple-a">访谈</i><i></i></div><div class="calendar-row"><strong>周宁<small>灯光</small></strong><i class="alloc blue-a">品牌片</i><i></i><i class="alloc conflict-a">双重安排</i><i></i><i class="alloc orange-a">发布会</i></div><div class="calendar-row"><strong>王哲<small>剪辑</small></strong><i></i><i class="alloc teal-a">品牌片</i><i class="alloc teal-a">品牌片</i><i></i><i></i></div></article>
+              <article class="panel schedule-card recommended" data-schedule="after"><div class="panel-head"><span><strong>调整后 · 推荐方案</strong><small>无硬冲突，等待人工确认</small></span><b class="good-chip">推荐</b></div><div class="calendar-head"><span>人员</span><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span></div><div class="calendar-row"><strong>林可<small>摄影</small></strong><i class="alloc blue-a">品牌片</i><i class="alloc blue-a">品牌片</i><i></i><i class="alloc purple-a">访谈</i><i></i></div><div class="calendar-row"><strong>周宁<small>灯光</small></strong><i class="alloc blue-a">品牌片</i><i></i><i class="alloc soft-a">文旅片</i><i></i><i class="alloc orange-a">发布会</i></div><div class="calendar-row"><strong>王哲<small>剪辑</small></strong><i></i><i></i><i class="alloc teal-a">品牌片</i><i class="alloc teal-a">品牌片</i><i></i></div></article>
+            </div>
+            <article class="panel change-list"><div class="panel-head"><span><strong>建议调整 3 项</strong><small>整套应用或整套退回，不允许只挑有利部分</small></span></div><div><span>林可 · 南山品牌片</span><s>周二 13:30–18:00</s><b>周二 09:00–13:00</b><em>消除双重安排</em></div><div><span>周宁 · 城市文旅短片</span><s>周三 10:00–18:00</s><b>周三 08:30–15:30</b><em>满足场地窗口</em></div><div><span>王哲 · 品牌片初剪</span><s>周二</s><b>周三–周四</b><em>等待素材校验</em></div></article>
+          </section>
+
+          <section class="view" data-view="工时" hidden>
+            <div class="page-intro"><div><span class="eyebrow">PLAN VS ACTUAL</span><h2>工时回填与偏差</h2><p>计划来自排期，实际由你快速回填；差异会影响成本预测和下次估算。</p></div><button class="primary">＋ 填报今日工时</button></div>
+            <div class="metric-grid four"><article class="metric"><span>本周计划</span><strong>250h</strong><small>14 人</small></article><article class="metric"><span>已填实际</span><strong>198h</strong><small>填报率 79%</small></article><article class="metric alert"><span>超计划</span><strong>16h</strong><small>集中在现场执行</small></article><article class="metric"><span>待确认</span><strong>3</strong><small>异常工时记录</small></article></div>
+            <article class="panel table-panel"><div class="panel-head"><span><strong>本周工时明细</strong><small>计划 / 实际 / 差异</small></span><div class="filter-pills"><button class="active">全部</button><button>待确认</button><button>有偏差</button></div></div><div class="data-table six"><div class="table-head"><span>人员</span><span>项目</span><span>工作包</span><span>计划</span><span>实际</span><span>差异</span></div><div><strong>林可<small>摄影</small></strong><span>南山品牌片</span><span>外景拍摄</span><span>16h</span><span>19h</span><b class="bad">+3h</b></div><div><strong>周宁<small>灯光</small></strong><span>新品发布会</span><span>现场执行</span><span>10h</span><span>14h</span><b class="bad">+4h</b></div><div><strong>王哲<small>剪辑</small></strong><span>南山品牌片</span><span>初剪</span><span>24h</span><span>20h</span><b class="good">-4h</b></div><div><strong>刘倩<small>制片</small></strong><span>城市文旅短片</span><span>勘景协调</span><span>8h</span><span>8h</span><b>0h</b></div></div></article>
+          </section>
+
+          <section class="view" data-view="成本" hidden>
+            <div class="page-intro"><div><span class="eyebrow">COST CONTROL</span><h2>成本三线管理</h2><p>同时看计划、实际和完工预测，不等项目结束才发现亏损。</p></div><button class="secondary">导出成本报表</button></div>
+            <article class="cost-hero"><div><span>本月合同收入</span><strong>¥428,000</strong><small>5 个执行中项目</small></div><div><span>基准计划成本</span><strong>¥286,000</strong><small>预算毛利 33.2%</small></div><div><span>当前实际成本</span><strong>¥193,400</strong><small>已发生 67.6%</small></div><div class="forecast"><span>完工预测</span><strong>¥301,600</strong><small class="bad">预计超基准 ¥15,600</small></div></article>
+            <div class="split wide-left"><article class="panel chart-panel"><div class="panel-head"><span><strong>项目成本走势</strong><small>累计值 · 单位：万元</small></span><div class="legend"><i class="gray"></i>计划 <i class="blue"></i>实际 <i class="orange"></i>预测</div></div><div class="fake-chart"><div class="y-axis"><span>30</span><span>20</span><span>10</span><span>0</span></div><div class="chart-area"><i class="gridline g1"></i><i class="gridline g2"></i><i class="gridline g3"></i><svg viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="成本走势图"><polyline class="plan-line" points="0,210 100,180 200,145 300,105 400,70 500,36 600,12"/><polyline class="actual-line" points="0,210 100,184 200,151 300,112 400,86"/><polyline class="forecast-line" points="400,86 500,44 600,0"/></svg><div class="x-axis"><span>准入</span><span>策划</span><span>准备</span><span>拍摄</span><span>后期</span><span>审片</span><span>交付</span></div></div></div></article><article class="panel"><div class="panel-head"><span><strong>偏差来源</strong><small>完工预测相对基准</small></span></div><div class="variance-list"><div><span>临时设备租赁</span><b class="bad">+¥8,600</b></div><div><span>现场加班</span><b class="bad">+¥6,200</b></div><div><span>交通住宿</span><b class="bad">+¥3,400</b></div><div><span>后期效率提升</span><b class="good">−¥2,600</b></div><strong>净偏差 <b class="bad">+¥15,600</b></strong></div></article></div>
+          </section>
+
+          <section class="view" data-view="报表" hidden>
+            <div class="page-intro"><div><span class="eyebrow">OPERATIONS REVIEW</span><h2>经营分析报表</h2><p>把项目、人员、进度和成本放在同一个经营视角里复盘。</p></div><div class="actions"><button class="secondary">本月⌄</button><button class="primary">生成月报</button></div></div>
+            <div class="report-grid"><article class="panel score-card"><span>项目按期交付率</span><strong>87.5%</strong><div class="ring"><i></i></div><small class="good">较上月 +5.2%</small></article><article class="panel score-card"><span>人员有效利用率</span><strong>72.8%</strong><div class="ring teal-ring"><i></i></div><small>目标区间 70–80%</small></article><article class="panel score-card"><span>成本预测准确率</span><strong>91.3%</strong><div class="ring purple-ring"><i></i></div><small class="good">较上月 +3.1%</small></article><article class="panel score-card"><span>平均修改轮次</span><strong>2.4</strong><div class="ring orange-ring"><i></i></div><small class="bad">目标 ≤ 2.0</small></article></div>
+            <div class="split equal"><article class="panel"><div class="panel-head"><span><strong>项目健康矩阵</strong><small>进度风险 × 成本风险</small></span></div><div class="matrix"><span class="quadrant q1">进度正常<br>成本关注</span><span class="quadrant q2">双重风险</span><span class="quadrant q3">健康项目</span><span class="quadrant q4">进度关注<br>成本正常</span><button style="left:34%;top:62%">南山品牌片</button><button class="orange-point" style="left:68%;top:39%">新品发布会</button><button class="red-point" style="left:72%;top:20%">城市文旅片</button></div></article><article class="panel"><div class="panel-head"><span><strong>月度复盘结论</strong><small>系统归纳，人工确认后沉淀</small></span></div><div class="insight-list"><div><i>1</i><span><strong>外景项目应增加 10% 天气缓冲</strong><small>近 6 个项目有 4 个因天气调整拍摄日</small></span></div><div><i>2</i><span><strong>双机位访谈的剪辑估算偏低</strong><small>实际工时平均高于模板 18%</small></span></div><div><i>3</i><span><strong>摄影岗位在周中持续紧张</strong><small>建议提前锁定合作摄影资源</small></span></div></div><button class="secondary full">查看复盘记录</button></article></div>
+          </section>
+
+          <section class="view" data-view="模板与设置" hidden>
+            <div class="page-intro"><div><span class="eyebrow">RULES & LEARNING</span><h2>模板、规则与经验</h2><p>把成熟做法沉淀成模板；系统可以建议，但修改规则必须由你确认。</p></div><button class="primary">＋ 新建项目模板</button></div>
+            <div class="template-grid"><article class="template-card"><span class="template-icon blue-bg">片</span><div><h3>企业品牌片</h3><p>7 阶段 · 42 个默认工作包</p><small>最近使用 8 次</small></div><button>编辑</button></article><article class="template-card"><span class="template-icon purple-bg">访</span><div><h3>人物访谈</h3><p>7 阶段 · 24 个默认工作包</p><small>最近使用 12 次</small></div><button>编辑</button></article><article class="template-card"><span class="template-icon orange-bg">会</span><div><h3>活动发布会</h3><p>7 阶段 · 36 个默认工作包</p><small>最近使用 5 次</small></div><button>编辑</button></article></div>
+            <div class="split wide-left"><article class="panel"><div class="panel-head"><span><strong>经验改进建议</strong><small>来自已关闭项目的实际数据</small></span><b class="new-chip">2 条待确认</b></div><div class="recommendation"><span class="ai-badge">AI</span><div><strong>企业品牌片：外景拍摄增加半天缓冲</strong><p>过去 8 个品牌片项目中，5 个发生天气或场地调整；加入缓冲后预计按期率提升 9%。</p><small>依据：8 个已关闭项目 · 置信度 82%</small></div><div><button class="ghost">忽略</button><button class="primary">确认应用</button></div></div><div class="recommendation"><span class="ai-badge">AI</span><div><strong>人物访谈：剪辑基准从 20h 调整到 24h</strong><p>双机位项目的实际剪辑中位数为 23.6h，当前模板持续低估。</p><small>依据：12 个已关闭项目 · 置信度 91%</small></div><div><button class="ghost">忽略</button><button class="primary">确认应用</button></div></div></article><article class="panel settings-list"><div class="panel-head"><span><strong>排期规则</strong><small>当前启用</small></span><button>管理</button></div><div><span>每日标准产能</span><b>8 小时</b></div><div><span>单日最大排期</span><b>12 小时</b></div><div><span>最短连续休息</span><b>11 小时</b></div><div><span>跨场地缓冲</span><b>按路线矩阵</b></div><div><span>人工排期备用</span><b class="good">始终可用</b></div></article></div>
+          </section>
+        </div>
+
+        <aside class="explain-panel" aria-label="功能与原理">
+          <div class="explain-head"><span class="explain-icon">?</span><span><small>当前页面</small><strong id="explain-object">工作台</strong></span></div>
+          <section><h3>这个页面解决什么</h3><p id="explain-purpose"></p></section>
+          <section><h3>核心功能</h3><ul id="explain-features"></ul></section>
+          <section><h3>工作原理</h3><p id="explain-principle"></p></section>
+          <section class="source-box"><h3>数据从哪里来</h3><p id="explain-source"></p></section>
+          <section class="human-box"><h3>你保留的决定权</h3><p id="explain-human"></p></section>
+          <p class="demo-note">这是界面 Demo，只展示交互逻辑，不写入真实系统。</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
